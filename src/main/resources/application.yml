@@ -1,0 +1,40 @@
+spring:
+  application:
+    name: tender-hack-app
+  mvc:
+    pathmatch:
+      matching-strategy: ant_path_matcher
+  datasource:
+    platform: postgres
+    driverClassName: org.postgresql.Driver
+    url: jdbc:postgresql://ec2-52-48-159-67.eu-west-1.compute.amazonaws.com/dffvicsks1i8v6
+    username: wkbvnhaqrxrioo
+    password: 72c1517ee7bfa1a4cd801bcb3efb20187f0e8a95d5c1282f1223b68cd9ad54f8
+  jpa:
+    database: POSTGRESQL
+    hibernate:
+      dl-auto: none
+  flyway:
+    locations: classpath:db/migration, classpath:db/test-data
+
+server:
+  port: 10552
+  shutdown: graceful
+  servlet:
+    context-path: /api/v1
+
+jwt:
+  secret: "t$%^en@der112HAcK@##"
+
+out-system:
+  url: "https://emulate-tender-hack.herokuapp.com/api/v1"
+  key: "2db75760-bd8f-11ec-9d64-0242ac120002"
+  endpoints:
+    get-sessions: "/sessions/{sessionType}"
+    get-session: "/session/{sessionId}"
+    make-bet: "/session/{sessionId}/bet"
+
+mailSender:
+  subject: "Tag All - уведомление о котировочной сессии"
+  userName:
+  password:
