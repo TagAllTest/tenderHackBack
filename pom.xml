@@ -9,7 +9,7 @@
         <relativePath/> <!-- lookup parent from repository -->
     </parent>
     <groupId>ru.TagAll</groupId>
-    <artifactId>tender-hack-app</artifactId>
+    <artifactId>tenderHackBack</artifactId>
     <version>0.0.1-SNAPSHOT</version>
     <name>tender-hack-app</name>
     <description>tender-hack-app</description>
